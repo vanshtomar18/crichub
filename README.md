@@ -5,7 +5,7 @@ CricHub is a modern, responsive learning platform designed around the theme of c
 
 ## 🌐 Live Preview
 
-🔗 [Live Demo]((https://vanshtomar18.github.io/crichub/))
+🔗 [Live Demo](https://vanshtomar18.github.io/crichub/)
 
 ## 📁 Folder Structure
 
