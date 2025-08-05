@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+    }
+    body{
+        height: auto;
+        align-items: center;
+    }
+
+    .header{
+        margin-top: 20px;
+        
+    }
+
+    .nav_content{
+        text-decoration: none;
+    }
+    h1{
+        color: black;
+        font-size: 50px;
+        font-weight: 800;
+    }
+    .header_content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        /*it will put the elements at the centre*/
+        margin: 0 auto;
+        
+        
+    }
+    .img_logo{
+        height: 50px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .navi{
+        
+        display: flex;
+        gap: 2rem;
+        
+    }
+    @media screen and (max-width:752px) {
+        .nav{
+            display: none;
+        }
+        
+    }
+    
+    .contact_button{
+        color: azure;
+        background-color: rgb(50, 50, 227);
+        border-radius: 5px;
+        height: 30px;
+        width: 90px;
+    }
+    @media  screen and (max-width:305px) {
+        button{
+            display: none;
+        }
+        
+    }
+    .nav_content{
+        color: gray;
+        transform: color 0.1s;
+        font-size: 1.2rem;
+    }
+    .nav_content:hover{
+        color: blue;
+    }
+    .sidebar{
+        display: none;
+    }
+    @media screen and (max-width:305px){
+        .sidebar{
+            display: block;
+            border: none;
+            background-color: azure;
+        }
+        
+    }
+    .menu_icon{
+        height: 1.2rem;
+    }
+    .hero-section{
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 1rem;
+    }
+    .hero-sec-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        gap: 4rem;
+        
+        
+    }
+    @media  screen and (max-width:810px){
+        .hero-sec-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button_group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .company_names1{
+            display: grid;
+            grid-template-columns: repeat(4,2fr);
+           
+        }
+        
+    }
+    
+    .left-box-p{
+        color: blue;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        font-size: 30px;
+    }
+
+    .hero_sec_heading{
+        font-size: 60px;
+        font-weight: 900;
+        margin-bottom: 2rem;
+        
+    }
+
+    .heading-p{
+        margin-bottom: 2rem;
+    }
+
+    .hero_sec_img{
+        border-radius: 10px;
+        height: 440px;
+        width: 440px;
+        justify-content: baseline;
+        
+    }
+    .left-box{
+        animation: leftslide 1s ease;
+    }
+
+    @keyframes leftslide {
+        0%{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+    }
+
+    #hero_buttton{
+        text-decoration: none;
+    }
+    
+    .hero_button1{
+        background-color: blue;
+        color: white;
+        border-radius: 4px;
+        width: 80px;
+        height: 30px;
+        font-weight: 600;
+        margin-right: 1rem;
+        border: none;
+    }
+
+    .hero_button2{
+        background-color: rgb(70, 65, 65);
+        color: azure;
+        border-radius: 4px;
+        width: 80px;
+        height: 30px;
+        font-weight: 600;
+        border: none;
+    }
+    .comapny_container{
+        background-color: rgb(169, 162, 162);
+        animation: cslide 1s ease;
+        width:500px;
+        margin: 0 auto;
+    }
+    @keyframes cslide {
+        0%{
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+    }
+    .company_content{
+        display: flex;
+        
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .clogo{
+        height: 15px;
+        width: 15px;
+        background-color: grey;
+        color: grey;
+        
+    }
+    .cname{
+        font-size: 19px;
+        font-weight: 600;
+        margin-right: 9px;
+        
+
+    }
+    .hero_button1:hover{
+        background-color: rgb(78, 78, 242);
+
+    }
+    .hero_button2:hover{
+        background-color: black;
+    }
+    .feature_container{
+        height: auto;
+        background-color: rgb(235, 230, 230);
+        
+        
+    }
+    .feature_content{
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        
+        
+        
+    }
+    .feature_des{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .feature_card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 1.5rem;
+        
+    }
+    @media screen and (max-width:880px) {
+        .feature_card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+    #card1_icon{
+        height: 50px;
+        width: 50px;
+        border-radius: 300px;
+    }
+    .card1_des{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        color: white;
+
+    }
+    .feature_heading{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .card1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 153, 255);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+    }
+    .card2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 0, 157);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+    }
+    .card3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 179, 0);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+    }
+    .card4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 255, 234);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+    }
+    .card5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 255, 72);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+    }
+    .card6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(162, 0, 255);
+        height: 230px;
+        width: 400px;
+        border-radius: 10px;
+        margin-bottom: 3rem;
+    }
+    
+    .test_img1{
+        border-radius: 100px;
+        margin: 5px;
+    }
+    .test_img2{
+        height: 90px;
+        width: 90px;
+        border-radius: 500px;
+    }
+    .test_img3{
+
+        height: 90px;
+        width: 90px;
+        border-radius: 500px;
+    }
+    
+    .test_saying{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width:810px){
+        .test_saying{
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+        }
+        
+    }
+    .test_heading{
+        display: flex;
+        justify-content: center;
+    }
+    .test_box1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px grey;
+        height: 250px;
+    }
+        
+    
+    .test_box2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        height: 250px;
+    
+        box-shadow: 2px 2px 5px grey;
+    }
+    .test_box3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px grey;
+        height: 250px;
+    
+    }
+       
+    .test_p{
+        margin: 10px;
+    }
+    .test_name{
+        color: blue;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .test_heading{
+        margin: 1rem;
+    }
+    .test_container{
+        margin-top: 2rem;
+    }
+    .logo{
+        text-decoration: none;
+    }
+
+    .newsletter_content{
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        background-color: rgb(237, 233, 233);
+
+    }
+    @media screen and (max-width:810px) {
+        .newsletter_content{
+            display: grid;
+            grid-template-rows: repeat(2,0.7fr);
+        }
+        
+    }
+    .news_img{
+        height: 350px;
+        width: 450px;
+        
+
+    }
+    
+    .news_right{
+        display: flex;
+        flex-direction: column;
+        
+        
+        margin: auto;
+        
+        
+       
+    }
+    .news_span{
+        
+        margin-left: 0 auto;
+        font-size: 11px;
+    }
+    .news_heading{
+        color: blue;
+        font-size: 29px;
+        margin-bottom: 0.2rem;
+    }
+    .news_form{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        
+    }
+    #email{
+        width: 160px;
+    }
+    .news_button{
+        background-color: blue;
+        color: white;
+        font-weight: 600;
+        width: 50px;
+        border-radius: 3px;
+    }
+    .footer_content{
+        max-width: 1000px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 2rem;
+        gap: 4rem;
+    }
+    @media screen and (max-width:810px) {
+        .footer_content{
+            display: grid;
+            
+            
+        }
+        
+        
+        
+    }
+    .footerInsta{
+        height: 25px;
+    }
+    .footerFB{
+        height: 25px;
+    }
+    .footerlinkedin{
+        height: 25px;
+    }
+    .footertwitter{
+        height: 28px;
+    }
+    .img_logo_footer{
+        height: 29px;
+    }
+    .footer_heading{
+        font-size: 20px;
+    }
+    #footerImage{
+        text-decoration: none;
+        margin-right: 1rem;
+    }
+    .footer_list{
+        text-decoration: none;
+        list-style-type: none;
+        color: rgb(110, 108, 108);
+        
+    }
+    .right_foooter{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+        
+    }
+    .li{
+        margin-top: 1rem;
+    }
+    .logo{
+        margin-bottom: 0.5rem;
+    }
+    .footer_images{
+        margin-top: 1rem;
+    }
+    .footertwitter{
+        margin-top: 9px;
+    }
+    .footer_copyright{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .footer_p{
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(40, 39, 39);
+    }
+
+
+
+</style>
+<body>
+   <div class="header">
+    <div class="header_content">
+        <a href="#home" class="logo">
+            <img src="cricket logo.jpg" alt="click" class="img_logo">
+            <h1>CricHub</h1>
+        </a>
+
+        <nav class="nav">
+            
+            <strong class="navi">
+
+                <a href="#home" class="nav_content">Home</a>
+                <a href="#home" class="nav_content">Features</a>
+                <a href="#home" class="nav_content">Pricing</a>
+                <a href="#home" class="nav_content">Blog</a>
+                <a href="#home" class="nav_content">About</a>
+
+            </strong>
+        </nav>
+
+        <a href="#contact_button">
+            <button class="contact_button">Contact Us</button>
+        </a>
+
+        <button class="sidebar">
+            <img src="menu icon.jpg" alt="click" class="menu_icon">
+        </button>
+
+    </div>
+    
+   </div> 
+
+   <div class="hero-section">
+
+    <section class="hero-sec-content">
+
+        <div class="left-box">
+
+            <p class="left-box-p">Very proud to introduce</p>
+
+            <h1 class="hero_sec_heading">Seamless Learning for Brighter Future</h1>
+
+            <p class="heading-p">Our innovative platform offers an effortless and seamless approach to learning,empowering youths of all ages to brighter future.  Join us on a transformation journey to know your true potential and unlock your true talent with the help of our experts.</p>
+
+            <div class="button_group">
+                <a href="#hero_buttton" id="hero_buttton">
+                    <button class="hero_button1">Start now</button>
+                    <button class="hero_button2">Take tour</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="right-box">
+            <img src="cricket.jpg" alt="learning" class="hero_sec_img">
+        </div>
+
+    </section>
+    <div class="comapny_container">
+        <div class="company_content">
+            <h2>Trusted by the Best</h2>
+            <div class="company_names1">
+                <img src="google logo.png" alt="glogo" class="clogo" id="gg1">
+                <span class="cname" id="gg2">Google</span>
+            
+                <img src="Microsoft_logo.svg" alt="glogo" class="clogo" id="mg1">
+                <span class="cname" id="mg2">Mircosoft</span>
+            
+            
+                <img src="Aaj_tak_logo.png" alt="glogo" class="clogo" id="ag1">
+                <span class="cname" id="ag2">Aaj Tak</span>
+            
+                <img src="walmart logo.jpg" alt="glogo" class="clogo" id="wg1">
+                <span class="cname" id="wg2">Walmart</span>
+            
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="feature_container">
+        <div class="feature_content">
+            <div class="feature_des">
+                <h2 class="feature_heading">
+                    Our Competitive Advantage
+                </h2>
+                <p>
+                    We provide a great panel of analysts who are fully determined in providing the quality knowledge to the learners and ensure that they will get best output from us.
+                </p>
+            </div>
+            <div class="feature_card">
+                
+                <div class="card1">
+                    <div class="card1_icon">
+                        <img src="idea logo.jpg" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Personalized Learning</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+                <div class="card2">
+                    <div class="card1_icon">
+                        <img src="video logo.jpg" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Affordability</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+                <div class="card3">
+                    <div class="card1_icon">
+                        <img src="handshake.jpg" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Industry Partnerships</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+                <div class="card4">
+                    <div class="card1_icon">
+                        <img src="comp.jpg" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Innovative Technology</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+                <div class="card5">
+                    <div class="card1_icon">
+                        <img src="call.jpg" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Responsive Support</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+                <div class="card6">
+                    <div class="card1_icon">
+                        <img src="graph.avif" alt="click" id="card1_icon">
+                    </div>
+                    <div class="card1_des">
+                        <h3 class="feature_heading">Analytics and Insights</h3>
+                        <p>Offer tailored learning experiences through digital machines and techniques to cater to individual learner needs.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="test_container">
+        <div class="test_content">
+            <div class="test_heading">
+                <h2>What Others Say About Us</h2>
+            </div>
+            <div class="test_saying">
+                <div class="test_box1">
+                    
+                    <p class="test_p">
+                        "Abbu ke jaisa khelna h to sahi jagah pe aaye ho tum bacha. Ye technique se lekar sab kuch inka sahi h."
+                    </p>
+                    <img src="wasay habib.jpg" alt="click" class="test_img1">
+                    <span class="test_name">Wasay Habib</span>
+                    <span>Cricket Expert</span>
+
+                    
+                </div>
+
+                <div class="test_box2">
+                    
+                    <p class="test_p">
+                        "Inke yaha ki advanced technology ko dekh kr to mai khud samajh gya ki front foot pe konsa leg aage karna hai."
+                    </p>
+                    <img src="vikratn gupta.jpg" alt="click" class="test_img2">
+                    <span class="test_name">Front Foot Wala</span>
+                    <span class="test_job">Cricket Analyst</span>
+
+                    
+                </div>
+
+                <div class="test_box3">
+                    
+                    <p class="test_p">
+                        "Dekhye mera to ye manna hai ki na cricbuzz acha h or na hi sports tak, sabse acha apna <strong>CricHub</strong> hai."
+                    </p>
+                    <img src="gambhir.webp" alt="click" class="test_img3">
+                    <span class="test_name">Gambhir God</span>
+                    <span>Finals Expert</span>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter_container">
+
+        <div class="newsletter_content">
+
+            <div class="news_left">
+                <img src="ball.jpeg" alt="click" class="news_img">
+
+            </div>
+            
+            <div class="news_right">
+                
+                <div class="news_head">
+                    <h2 class="news_heading">Get the latest updates</h2>
+                    <p class="news_p" id="news_p">Sign up for our newsletter</p>
+                </div>
+
+                <form class="news_form"> 
+
+                    <input type="text" id="email" placeholder="Email">
+                    <button class="news_button" onclick="document.addEventListener('click',sendbtn)">Send</button>
+
+                </form>
+
+                <div class="news_span">
+                    <span class="news_span1">
+                        By signing to our newsletter you agree to our <a href="#news">Terms of Service</a> and <a href="#news">Privacy Policy</a>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer_section">
+        <div class="footer_content">
+            <div class="left_footer">
+                <div class="left_heading">
+                    <a href="#home" class="logo">
+                        <img src="cricket logo.jpg" alt="click" class="img_logo_footer">
+                        <h1 class="footer_heading">CricHub</h1>
+                    </a>
+                </div>
+                <div class="footer_p">
+                    <p>Seamless Learning for Brighter Future</p>
+                </div>
+                <div class="footer_images">
+
+                    <a href="#footerImage" id="footerImage">
+                        <img src="instaLogo.png" alt="click" class="footerInsta">
+                    </a>
+
+                    <a href="#footerImage" id="footerImage">
+                        <img src="fblogo.jpg" alt="click" class="footerFB">
+                    </a>
+
+                    <a href="#footerImage" id="footerImage">
+                        <img src="linkedinLogo.jpg" alt="click" class="footerlinkedin">
+                    </a>
+
+                    <a href="#footerImage" id="footerImage">
+                        <img src="twitter.png" alt="click" class="footertwitter">
+                    </a>
+
+                    
+                </div>
+            </div>
+
+            <div class="right_foooter">
+                <div class="footer_products">
+                  <h2>Products</h2>
+                  <a href="#prod" class="footer_list">
+                    <ul class="footer_list">
+                        <li class="li">Overview</li>
+                        <li class="li">Solutions</li>
+                        <li class="li">Pricing</li>
+                        <li class="li">Customers</li>
+                      </ul>
+                  </a>
+                </div>
+
+
+                <div class="footer_company">
+                  <h2>Company</h2>
+                  <a href="#prod" class="footer_list">
+                    <ul class="footer_list">
+                        <li class="li">About</li>
+                        <li class="li">Investors Relations</li>
+                        <li class="li">Jobs</li>
+                        <li class="li">Press</li>
+                        <li class="li">Blogs</li>
+                    </ul>
+                  </a>
+                </div>
+
+
+                <div class="footer_support">  
+                  <h2>Support</h2>
+                  <a href="#prod" class="footer_list">
+                    <ul class="footer_list">
+                        <li class="li">Contact </li>
+                        <li class="li">Documentation</li>
+                        <li class="li">Chat</li>
+                        <li class="li">FAQ</li>
+                    </ul>
+                  </a>
+                </div>
+
+
+                <div class="footer_legal">
+                  <h2>Legal</h2>
+                  <a href="#prod" class="footer_list">
+                    <ul class="footer_list">
+                        <li class="li">Terms of Service</li>
+                        <li class="li">Privacy Policy</li>
+                        <li class="li">Cookie Settings</li>
+                        
+                    </ul>
+                  </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <span>&copy; 2021 - Present CricHub. All Rights Reserved.</span>
+        </div>
+        
+    </div>
+    <script>
+        function changeText(){
+            let send=document.getElementById('news_p');
+            send.innerHTML="Phle cricket ka C to seekh le ja"
+            event.preventDefault();
+        } 
+       function sendbtn(){
+        alert("Your Email has been received.");
+       }
+       
+
+    </script>
+    
+
+   
+</body>
+</html>
